@@ -1,5 +1,6 @@
-# A-LOAM-NOTED
+# A-LOAM-NOTED modified
 ## Chinese annotated version of A-LOAM
+### A-LOAM-colorMap
 
 
 a loam modified
