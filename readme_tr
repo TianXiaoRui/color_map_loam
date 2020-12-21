@@ -1,0 +1,71 @@
+(1)启动loam 建图节点:
+ roslaunch aloam_velodyne aloam_velodyne_HDL_64.launch
+ 
+(2)播放rosbag:
+ rosbag play /home/tr/Documents/Dataset/kitti_lidar/kitti_2011_10_03_drive_0027_synced.bag 
+
+##点云加载的话题消息列表:
+^Ctr@tr-Legion-Y7000P-2019:~/catkin_ws$ rostopic list 
+/mapLoader/point_map
+/rosout
+/rosout_agg
+/tf
+/tf_static
+
+
+
+###topic 
+/aft_mapped_path
+/aft_mapped_to_init
+/aft_mapped_to_init_high_frec
+/clicked_point
+/clock
+/initialpose
+/kitti/camera_color_left/camera_info
+/kitti/camera_color_left/image_raw
+/kitti/camera_color_right/camera_info
+/kitti/camera_color_right/image_raw
+/kitti/camera_gray_left/camera_info
+/kitti/camera_gray_left/image_raw
+/kitti/camera_gray_right/camera_info
+/kitti/camera_gray_right/image_raw
+/kitti/image
+/kitti/oxts/gps/fix
+/kitti/oxts/gps/vel
+/kitti/oxts/imu
+/kitti/velo/pointcloud
+/laser_cloud_corner_last
+/laser_cloud_flat
+/laser_cloud_less_flat
+/laser_cloud_less_sharp
+/laser_cloud_map
+/laser_cloud_sharp
+/laser_cloud_surf_last
+/laser_cloud_surround
+/laser_odom_path
+/laser_odom_to_init
+/laser_remove_points
+/move_base_simple/goal
+/rosout
+/rosout_agg
+/tf
+/tf_static
+/velodyne_cloud_2
+/velodyne_cloud_3
+/velodyne_cloud_registered
+
+
+当前没有同步消息,导致时间戳还是有问题
+表现为断断续续
+
+通过rqt_bag可知: 在kitti数据集中 点云的数据和图像的数据是不同步的(基本是同步的) 那为什么会卡呢????
+
+
+
+##保存点云:
+rosservice call /savemap
+
+##加载点云:
+roslaunch aloam_velodyne map_loader.launch
+ 
+等待一会
