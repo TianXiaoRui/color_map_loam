@@ -1,9 +1,19 @@
 # A-LOAM-NOTED
 ## Chinese annotated version of A-LOAM
 
-aloam as front-end, add RGB to map pointclouds 
-![color pointclouds]()
-Please see my chinese blog for A-LOAM source code analysis: https://www.cnblogs.com/wellp/p/8877990.html
+
+a loam modified
+
+A-LOAM as front-end, subscribe image massage, and add RGB to map pointclouds 
+
+### visulization result:
+
+![color pointclouds](https://github.com/TianXiaoRui/color_map_loam/blob/master/picture/colormap.png)
+
+
+TODO:
+
+
 
 
 A-LOAM is an Advanced implementation of LOAM (J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time), which uses Eigen and Ceres Solver to simplify code structure. This code is modified from LOAM and [LOAM_NOTED](https://github.com/cuitaixiang/LOAM_NOTED). This code is clean and simple without complicated mathematical derivation and redundant operations. It is a good learning material for SLAM beginners.
